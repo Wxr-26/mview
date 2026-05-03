@@ -1,0 +1,63 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+build/
+.vite/
+.next/
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Local cache
+.cache/
+.cache-jm/
+thumbnails/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Media and downloads
+/mnt/
+/media/
+/downloads/
+/JMDownload/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.mp4
+*.mkv
+*.webm
+*.cbz
+*.cbr
+*.zip
+*.rar
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
