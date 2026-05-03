@@ -60,11 +60,11 @@ uvicorn app.main:app --reload
 
 ## Git Status
 
-- Branch: (run `git branch --show-current` after commit)
-- Commit created: pending
-- Commit hash: pending
-- Push completed: pending
-- Working tree clean: pending
+- Branch: `main`
+- Commit created: yes (via `git commit-tree` plumbing; plain `git commit` fails in this environment with `error: 未知选项 'trailer'`)
+- Commit hash: `03cfdac80abf5eb66fbc531eac5e5ebac2c6a6c1`
+- Push completed: yes (`main` -> `origin/main`)
+- Working tree clean: no — `docs/05-agents/prompts/prompt-be-001-init-backend.md` remains untracked (optional per prompt)
 
 ## Scope Check
 
@@ -82,4 +82,4 @@ uvicorn app.main:app --reload
 
 ## Issues
 
-- None.
+- Local `git commit` (with `-m` or `-F`) fails with `未知选项 'trailer'`; commit was created with `git write-tree`, `git commit-tree`, and `git update-ref` as documented above. Push emitted `fatal: unable to get credential storage lock: 只读文件系统` but still reported `main -> main` successfully.
