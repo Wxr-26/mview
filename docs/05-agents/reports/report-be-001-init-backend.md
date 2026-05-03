@@ -62,7 +62,7 @@ uvicorn app.main:app --reload
 
 - Branch: `main`
 - Commit created: yes (via `git commit-tree` plumbing; plain `git commit` fails in this environment with `error: 未知选项 'trailer'`)
-- Commit hash: `03cfdac80abf5eb66fbc531eac5e5ebac2c6a6c1`
+- Commit hashes: `03cfdac80abf5eb66fbc531eac5e5ebac2c6a6c1` (`feat(backend): initialize fastapi skeleton`), `4c45c994e03f06f2ec794b456c40f83722ba1b14` (report finalization); further docs-only commits may exist after the task
 - Push completed: yes (`main` -> `origin/main`)
 - Working tree clean: no — `docs/05-agents/prompts/prompt-be-001-init-backend.md` remains untracked (optional per prompt)
 
