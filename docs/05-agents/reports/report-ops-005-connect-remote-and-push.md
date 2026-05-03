@@ -11,7 +11,7 @@ Connect the local MView repository to the user-provided GitHub remote and push `
 - Added `origin` → `https://github.com/Wxr-26/mview.git` (no remote existed before).
 - Staged `prompt-ops-004`, `prompt-ops-005`, and this report; `report-ops-004-publish-github-repository.md` was already tracked unchanged from OPS-004.
 - Created commit `docs: add github publishing artifacts` using `git write-tree` / `git commit-tree` / `git update-ref` because wrapped `git commit` injects `--trailer`, incompatible with Git 2.25.1.
-- Ran `git push -u origin main` after the artifact commit; outcome recorded under **Push Status**.
+- Ran `git push -u origin main` after the artifact commit; push **succeeded** (new `main` on `origin`, upstream set).
 
 ## Files Added To Commit
 
@@ -36,9 +36,11 @@ Connect the local MView repository to the user-provided GitHub remote and push `
 ## Push Status
 
 - Commit created: **yes**
-- Commit hash: Final report commit hash should be checked with `git log -1 --format=%H` on `main` after the `docs: add github publishing artifacts` commit.
-- Push completed: **(filled after push attempt in agent session — confirm locally with `git branch -vv`)**
-- Upstream configured: **(filled after push attempt — confirm with `git branch -vv`)**
+- Artifact commit (`docs: add github publishing artifacts`): `578bb733856e5cb8cafdb7c71b3707d897d77f95`
+- Push completed: **yes** (`main` → `origin/main`, first publish)
+- Upstream configured: **yes** (`main` tracks `origin/main`)
+
+Follow-up doc-only commits (if any) will have their own hash from `git log -1 --format=%H`.
 
 ## Commands Run
 
@@ -82,4 +84,3 @@ git branch -vv
 ## Issues
 
 - `.git/config` required writing outside strict sandbox when adding `origin`; operation succeeded with full permissions.
-- Push result depends on environment credentials and network; verify with `git branch -vv` for `origin/main` tracking.
