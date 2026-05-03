@@ -48,10 +48,10 @@ Plus existing/untracked ops artifacts under `docs/05-agents/prompts/` (including
 ## Git Status
 
 - Branch: `main`
-- Commit created: **yes** (after agent run)
-- Commit hash: use `git log -1 --format=%H` after `docs: add project baseline documentation`
-- Push completed: **yes/no** — verify with `git branch -vv` and remote after push
-- Working tree clean: expected **yes** after commit (except any intentional local-only files)
+- Commit created: **yes**
+- Commit hash (`docs: add project baseline documentation`): `6ff9f7006d43fa801be8767bae8035f3195617e6`
+- Push completed: **yes** (`main` → `origin/main`)
+- Working tree clean: **yes** after baseline commit; a small doc-only amend may follow for report accuracy
 
 ## Commands Run
 
@@ -94,4 +94,5 @@ git push
 
 ## Issues
 
-- *(none unless push or commit failed — check session output)*
+- Commit used plumbing (`commit-tree`) due to `git commit` wrapper injecting unsupported `--trailer` on Git 2.25.1.
+- *(none otherwise)*
