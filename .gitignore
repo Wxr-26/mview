@@ -61,3 +61,7 @@ thumbnails/
 Thumbs.db
 .idea/
 .vscode/
+
+# Local agent operation artifacts
+docs/05-agents/prompts/
+docs/05-agents/reports/
